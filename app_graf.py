@@ -6,8 +6,6 @@ st.markdown('# Gráficos')
 st.sidebar.header('Barra de selação')
 
 
-
-
 x= np.linspace(0,2*np.pi,300)
 
 fig,ax = plt.subplots(figsize=(8,6))
@@ -15,7 +13,7 @@ fig,ax = plt.subplots(figsize=(8,6))
 def plotFunc():
     ax.plot(x,st.session_state.amp*np.sin(st.session_state.freq*x + st.session_state.fase),st.session_state.color_pick) 
 
-    ax.plot(x,st.session_state.amp*np.cos(st.session_state.freq*x + st.session_state.fase),'red') 
+    ax.plot(x,st.session_state.amp*np.sin(st.session_state.freq*x),'red') 
 
 if st.sidebar.checkbox('Mostra Gráfico'):
     plotFunc()
