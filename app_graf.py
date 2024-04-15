@@ -20,10 +20,10 @@ def plotFunc():
 if st.sidebar.checkbox('Mostra Gráfico'):
     plotFunc()
     st.pyplot(fig)
-st.sidebar.write('---')
-st.sidebar.slider('Mudar angulo de fase',min_value=-5.,max_value=5.,step=0.1,on_change=plotFunc,key='fase')
-st.sidebar.slider('Mudar amplitude',min_value=1,max_value=5,step=1,on_change=plotFunc,key='amp')
-st.sidebar.slider('Mudar frequência',min_value=1.,max_value=10.,step=1.,on_change=plotFunc,key='freq')
+st.write('---')
+st.slider('Mudar angulo de fase',min_value=-5.,max_value=5.,step=0.1,on_change=plotFunc,key='fase')
+st.slider('Mudar amplitude',min_value=1,max_value=5,step=1,on_change=plotFunc,key='amp')
+st.slider('Mudar frequência',min_value=1.,max_value=10.,step=1.,on_change=plotFunc,key='freq')
 
 #st.sidebar.selectbox('Selecione a cor da linha',['red','green','blue'],on_change=plotFunc,key='cor')
 st.sidebar.color_picker('Seleção de cores',on_change=plotFunc,key='color_pick')
